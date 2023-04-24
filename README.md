@@ -52,11 +52,53 @@
 - to modify while looping, you can use the .iterator() that every collection has since it extends the iterable interface and has ab iterator associated with it
 - example of iterator format: while(iterator.hasNext()) {Product product = iterator.next();
 - if(product.getWeight() > 20 )
-- {iterator.remove();
--     }
+- {iterator.remove();}
 - System.out.println(products.size());
-- System.out.println(products.size());
--   }
-- }
-
-- 
+- System.out.println(products.isEmpty());
+- System.out.println(products.conatains(window));
+- System.out.println(products.remove(window));
+- System.out.println(products.contains(window));}}
+- this would return 3, false, true, true, false (true at first for window, it gets removed, then it is no longer there thus the false)
+- java collections are useful and versatile
+- Lists are collections with iteration order
+- first element in a list is always 0
+- we can modify Lists using indices
+- addAll is bulk update
+- replaceAll can replace all elements in a list
+- when running a test, run all previous tests to make sure nothing is broken
+- make your collections private so that they wont be accessible outside the class
+- sort method can sort by how you want, this example was by weight
+- ArrayList is a list implementation with a backing array
+- ArrayList is very convenient
+- you can provide an initial capacity for backing array in an ArrayList
+- majority of the time you wont do this, however default size is 10
+- when going past the capacity, the size doubles, this is called growing
+- ArrayList is good for general purpose
+- LinkedLists are less CPU cache friendly than ArrayLists
+- LinkedLists are worse than ArrayLists in most cases, they implement queue list interface, LinkedLists are good when repeatedly adding elements to the start
+- LinkedLists vs ArrayLists - use in specific cases
+- Both LinkedList and ArrayList have different performance tradeoffs
+- Lists are very commonly used and you will see them a lot
+- Maps are collections of pairs, which is a key and a value
+- use Integer instead of int for map
+- use .get() to return what you want, the example in the video is return idToProduct.get(id);
+- V put(K key, V value)
+- void putAll(Map<? etxends K, ? extends V> values)
+- .put for a single value, .putAll for another Map
+- null keys and values are implementation specific
+- HashMap allows null key and null values
+- TreeMap will allow null value but not null key
+- get(Object key) looks up elements
+- containsKey(Object key) and containsValue(Object value) are booleans
+- you can use object for contains key
+- remove(Object key) removes an object
+- remember: int size() and boolean isEmpty()
+- Map is the only collection that doesnt extend or implement the collection interface
+- replace(key, value) updates a single value
+- replaceAll(BiFunction<K, V, V>) to replace elements using a function
+- remove(key, value) removes a key only if it has a value
+- forEach is convenient callback based iteration
+- remember to .get for Maps
+- HashMap is a good general purpose implementation, TreeMap defines sort order and adds functionality
+- Maps associate keys and values
+- 2 key implementations
